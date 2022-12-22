@@ -1,0 +1,15 @@
+.logo {
+    width: 100px;
+    padding: 10px;
+}
+.user {
+    width: 50px;
+    padding: 5px;
+}
+.retangulo{
+    background-color: rgb(44, 44, 212);
+}
+.quadrado{
+    background-color: orange;
+    padding: 35px;
+}
