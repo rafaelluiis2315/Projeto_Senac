@@ -1,0 +1,34 @@
+:root {
+    --branco: #fff;
+    
+    --azul-claro: #06AED5;
+
+    --cinza-claro: #d7d7d7;
+    --cinza-escuro: #191919;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 62.5%;
+    text-decoration: none;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: var(--cinza-claro);
+    color: var(--cinza-escuro);
+    min-height: 100vh;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+

@@ -1,0 +1,44 @@
+/* Header */
+header {
+    background-color: rgb(44, 44, 212);
+    height: 70px;
+}
+
+.logo {
+    width: 70px;
+    height: 50px;
+}
+
+.user-icon {
+    width: 45px;
+    height: 45px;
+}
+
+.quadrado {
+    background-color: orange;
+    padding: 35px;
+    margin: 0 20px;
+}
+
+/* Footer */
+footer {
+    background-color: rgb(44, 44, 212);
+    margin-top: 570px; /* REMOVER DEPOISSSSSSSSSSSSSSSS */
+    height: 70px;
+}
+
+.direitos-reservados {
+    color: var(--branco);
+    font-size: 1.6rem;
+}
+
+.social-icon {
+    font-size: 4.6rem;
+    color: var(--branco);
+}
+
+.social-icon:hover {
+    color: var(--cinza-claro);
+    transform: translateY(-4px);
+    transition-duration: 0.4s;
+}
