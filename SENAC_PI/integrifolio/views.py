@@ -1,6 +1,11 @@
 from django.shortcuts import render
 
-def ddd(request):
+def index(request):
    
     return  render(request, 'index.html') 
 
+def details(request):
+    return render(request, 'detalhes.hmtl')
+
+def login(request):
+    return render(request, 'login.html')
