@@ -4,3 +4,4 @@
 
 - pip install django
 - pip install python-dotenv
+- pip install Pillow
