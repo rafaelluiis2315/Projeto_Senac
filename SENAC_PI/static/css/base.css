@@ -1,3 +1,22 @@
+
+header{
+    background-image: url("../img/heard.png");
+    background-position: center;
+    background-size: cover;
+    height: 15rem;
+}
+
+.nav-item{
+    font-size: 1.5rem;
+}
+
+.linha{
+    background-color: var(--branco);
+    width: auto;
+    height: 0.2rem;
+    border-radius: 0.1rem;
+}
+
 footer {
     height: 153.38px;
     color: var(--branco);
