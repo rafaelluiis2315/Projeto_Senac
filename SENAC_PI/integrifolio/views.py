@@ -32,5 +32,3 @@ def eixo(request):
 
 def cadastro(request):
     return render(request, 'cadastro.html')
-
-#
