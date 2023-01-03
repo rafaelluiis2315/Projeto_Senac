@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+<h2>{{ projeto.nome_projeto }}</h2>
+<img src="{{ projeto.foto_capa.url }}" alt="logo">
+<p>{{ projeto.descricao }} </p>
+{% endblock conteudo %}

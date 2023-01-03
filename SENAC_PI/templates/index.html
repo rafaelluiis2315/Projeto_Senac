@@ -9,13 +9,12 @@
         <h1>{{ eixo.grouper }}</h1>
         
         {% for projeto in eixo.list %}
-            <h2>{{ projeto.id }}</h2>
+            <a href="{% url 'Detalhes' id=projeto.id %}">{{projeto.id}}</a>
             <h2>{{ projeto.nome_projeto }}</h2>
             <img src="{{ projeto.foto_capa.url }}" alt="logo">
             <p>{{ projeto.descricao }} </p>
         {% endfor %}
-        
-        
+
     {% endfor %}
         
 

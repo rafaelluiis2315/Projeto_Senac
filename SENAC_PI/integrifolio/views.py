@@ -17,8 +17,9 @@ def index(request):
 
     return  render(request, 'index.html', contexto) 
 
-def details(request):
-    return render(request, 'detalhes.hmtl')
+def details(request, id):
+    projeto = PROJETO.objects.get(id=id)
+    return render(request, 'detalhes.html', {'projeto':projeto})
 
 def login(request):
     return render(request, 'login.html')
