@@ -1,22 +1,19 @@
-{% extends "base.html" %}
+<!-- carregando arquivos -->
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- title -->
+{% block title %}
+  <title>Home | Integrifolio</title>
+{% endblock title %}
+
+<!-- CSS -->
+{% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'css/home.css'%}">
+{% endblock stylesheet %}
 
 {% block conteudo %}
+  <main>
 
-    {% regroup projetos|dictsort:"eixo" by eixo as eixo_list %}
-
-    
-    {% for eixo in eixo_list%}
-        <h1>{{ eixo.grouper }}</h1>
-        
-        {% for projeto in eixo.list %}
-            <h2>{{ projeto.id }}</h2>
-            <h2>{{ projeto.nome_projeto }}</h2>
-            <img src="{{ projeto.foto_capa.url }}" alt="logo">
-            <p>{{ projeto.descricao }} </p>
-        {% endfor %}
-        
-        
-    {% endfor %}
-        
-
+  </main>
 {% endblock conteudo %}

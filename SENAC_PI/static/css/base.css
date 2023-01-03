@@ -1,0 +1,24 @@
+footer {
+    height: 153.38px;
+    color: var(--branco);
+}
+
+.green-box {
+    height: 106px;
+    background-color: var(--verde-principal);
+}
+
+.gray-box {
+    height: 56.59px;
+    background-color: var(--cinza-claro);
+}
+
+
+
+.language iconify-icon {
+    font-size: 2.4rem;
+}
+
+.language span {
+    font-size: 1.6rem;
+}
