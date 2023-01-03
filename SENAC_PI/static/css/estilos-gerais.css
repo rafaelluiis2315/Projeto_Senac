@@ -1,9 +1,9 @@
 :root {
     --branco: #fff;
     
-    --azul-claro: #06AED5;
+    --verde-principal: #00D084;
 
-    --cinza-claro: #d7d7d7;
+    --cinza-claro: #EBEBEB;
     --cinza-escuro: #191919;
 }
 
@@ -21,7 +21,7 @@
 }
 
 body {
-    background-color: var(--cinza-claro);
+    background-color: var(--branco);
     color: var(--cinza-escuro);
     min-height: 100vh;
 }
