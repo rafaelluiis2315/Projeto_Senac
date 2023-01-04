@@ -1,0 +1,26 @@
+.texto-section-principal h1 {
+    font-family: 'Inconsolata';
+    font-weight: bold;
+    font-size: 4.5rem;
+    line-height: 58px;
+
+    color: #0D0D0D;
+}
+
+.texto-section-principal p {
+
+    font-family: 'Inder';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 28px;
+
+    color: var(--cinza-medio);
+}
+
+.texto-section-sobre {
+    
+}
+.banner-home {
+    width: 750px;
+}
