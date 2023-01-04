@@ -7,7 +7,7 @@
     color: #0D0D0D;
 }
 
-.texto-section-principal p {
+.texto-section-principal p, .texto-section-sobre p {
 
     font-family: 'Inder';
     font-style: normal;
@@ -18,10 +18,20 @@
     color: var(--cinza-medio);
 }
 
-.texto-aviaozinho h2 {
+.texto-aviaozinho{
+    font-family: 'Inconsolata';
+    font-weight: bold;
     color: var(--verde-principal);
 }
 
 .banner-home {
     width: 750px;
+}
+
+.btn-verde{
+    font-size: 1.4rem;
+    background-color: var(--verde-principal);
+    color: var(--branco);
+    font-family: 'Inder';
+    box-shadow: 0px 3px 8px rgba(136, 144, 194, 0.25), 0px 7px 21px rgba(37, 44, 97, 0.2);
 }

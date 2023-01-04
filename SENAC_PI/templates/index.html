@@ -4,51 +4,56 @@
 
 <!-- title -->
 {% block title %}
-  <title>Home | Integrifolio</title>
+<title>Home | Integrifolio</title>
 {% endblock title %}
 
 <!-- CSS -->
 {% block stylesheet %}
-  <link rel="stylesheet" href="{% static 'css/home.css'%}">
+<link rel="stylesheet" href="{% static 'css/home.css'%}">
 {% endblock stylesheet %}
 
 {% block conteudo %}
-  <main>
-    <!-- Section principal-->
-    <section>
-      <div class="container d-flex align-items-center justify-content-between">
+<main>
+  <!-- Section principal-->
+  <section>
+    <div class="container d-flex align-items-center justify-content-between">
 
-        <div class="texto-section-principal">
+      <div class="texto-section-principal">
 
-          <h1>Qualquer Coisa</h1>
-          <p>Fazer o melhor<br>trabalho possivel<br>sempre foi parte do<br>nosso trabalho.</p>
+        <h1>Qualquer Coisa</h1>
+        <p>Fazer o melhor<br>trabalho possivel<br>sempre foi parte do<br>nosso trabalho.</p>
 
-        </div>
-
-        <img class="banner-home" src="{% static 'img/banner_home.svg' %}" alt="Banner Home">
-
-      </div>  
-    </section>
-
-    <!-- Section Sobre-->
-    <section>
-      <div class="container d-flex align-items-center justify-content-between">
-        <div class="texto-section-sobre">
-
-          <h1>Sobre</h1>
-
-          <div class="texto-aviaozinho">
-            <h2>Com pessoas</h2>
-            <img src="{% static 'img/aviaozinho.svg' %}" alt="Aviaozinho">
-          </div>
-        
-          <p>"Botânica (do grego botánē, que significa planta) é uma área da<br>
-            Biologia voltada para o estudo das plantas. Tradicionalmente, outros<br>
-            organismos são estudados em Botânica, tais como algas, fungos e<br>
-            cianobactérias."</p>
-          <a href="#"></a>
-        </div>
       </div>
-    </section>
-  </main>
+
+      <img class="banner-home" src="{% static 'img/banner_home.svg' %}" alt="Banner Home">
+
+    </div>
+  </section>
+
+  <!-- Section Sobre-->
+  <section>
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="texto-section-sobre">
+
+
+        <div class="d-flex align-items-center mb-5">
+          <div>
+            <h1>Sobre</h1>
+            <h2 class="texto-aviaozinho">Com pessoas</h2>
+          </div>
+          <img class="mx-4 mt-5" src="{% static 'img/aviaozinho.svg' %}" alt="Aviaozinho">
+        </div>
+
+        <p>
+          "Botânica (do grego botánē, que significa planta) é uma área da<br>
+          Biologia voltada para o estudo das plantas. Tradicionalmente, outros<br>
+          organismos são estudados em Botânica, tais como algas, fungos e<br>
+          cianobactérias."
+        </p>
+        
+        <a class="mt-5 py-3 px-5 btn btn-verde" href="#">Get started</a>
+      </div>
+    </div>
+  </section>
+</main>
 {% endblock conteudo %}
