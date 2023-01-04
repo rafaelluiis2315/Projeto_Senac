@@ -1,22 +1,20 @@
-
+/* header da pagina base */
 header{
-    background-image: url("../img/heard.png");
-    background-position: center;
-    background-size: cover;
-    height: 15rem;
+    border-radius: 0 0 20% 20%;
+    background-color: var(--verde-principal);
+    height: 10rem;
 }
-
-.nav-item{
+/* colocando os link brancos */
+.nav-link{
     font-size: 1.5rem;
+    color: var(--branco);
 }
-
-.linha{
-    background-color: var(--branco);
-    width: auto;
-    height: 0.2rem;
-    border-radius: 0.1rem;
+/* link quando ativado */
+.active{
+    border-top: 2px solid;
+    border-bottom: 2px solid;
 }
-
+/* footer */
 footer {
     height: 153.38px;
     color: var(--branco);
