@@ -1,4 +1,4 @@
-.texto-section-principal h1 {
+.texto-section-principal h1 , .texto-section-sobre h1 {
     font-family: 'Inconsolata';
     font-weight: bold;
     font-size: 4.5rem;
@@ -18,9 +18,10 @@
     color: var(--cinza-medio);
 }
 
-.texto-section-sobre {
-    
+.texto-aviaozinho h2 {
+    color: var(--verde-principal);
 }
+
 .banner-home {
     width: 750px;
 }
