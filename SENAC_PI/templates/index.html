@@ -67,26 +67,42 @@
 
     </div>
   </section>
-
-  <section class="my-5">
-    <div>
-      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-        <defs>
-          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-        </defs>
-        <g class="parallax">
-          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(0, 208, 132, 0.7)" />
-          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(0, 208, 132, 0.5)" />
-          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(0, 208, 132, 0.3)" />
-          <use xlink:href="#gentle-wave" x="48" y="7" fill="#00D084" />
-        </g>
-      </svg>
-    </div><!--wave end-->
-
-    <div class="distaque ">
-
-    </div>
-  </section>
 </main>
 {% endblock conteudo %}
+
+{% block conteudoDestaque %}
+
+{% endblock conteudoDestaque %}
+
+{% block conteudoTwo %}
+<div class="projetos pt-5">
+  <main class="container mt-5 pt-5">
+    <div class="d-flex justify-content-between">
+      <div>
+        <h1>Todos os projetos</h1>
+        <h3>Quais são:</h3>
+      </div>
+      <div>
+        <input type="text" name="busca">
+      </div>
+    </div>
+
+    <div>
+      <div class="card" style="width: 18rem;">
+        <img src="../media/image_jogos.png" class="card-img-top p-3" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Projeto Jogos Digitais</h5>
+          <p class="card-text">Turma 52</p>
+          <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M15.582 8V2.5H9.58203V8L12.582 11L15.582 8ZM8.08203 9.5H2.58203V15.5H8.08203L11.082 12.5L8.08203 9.5ZM9.58203 17V22.5H15.582V17L12.582 14L9.58203 17ZM17.082 9.5L14.082 12.5L17.082 15.5H22.582V9.5H17.082Z"
+              fill="white" />
+          </svg>
+
+        </div>
+      </div>
+    </div>
+    
+  </main>
+</div>
+{% endblock conteudoTwo %}
