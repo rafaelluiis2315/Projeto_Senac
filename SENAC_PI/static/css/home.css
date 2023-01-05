@@ -113,3 +113,7 @@ main {
         min-height: 40;
     }
 }
+
+.card-icon {    
+    border-radius: 7px;
+}
