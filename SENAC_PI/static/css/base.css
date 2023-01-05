@@ -1,19 +1,27 @@
 /* header da pagina base */
-header{
+header {
     border-radius: 0 0 20% 20%;
     background-color: var(--verde-principal);
     height: 10rem;
 }
+
+.logo {
+    margin-top: 15%;
+}
+
 /* colocando os link brancos */
-.nav-link{
-    font-size: 1.5rem;
+.nav-link {
+    font-size: 1.7rem;
+    font-weight: bold;
     color: var(--branco);
 }
+
 /* link quando ativado */
-.active{
+.active {
     border-top: 2px solid;
     border-bottom: 2px solid;
 }
+
 /* footer */
 footer {
     height: 153.38px;
@@ -34,13 +42,14 @@ footer {
 }
 
 .fale-conosco {
-    font-size: 2rem;
+    font-size: 1.9rem;
+    text-decoration: none;
+    color: var(--branco);
     margin: -10px 0;
 }
 
 .endereco-telefone {
-    font-size: 2rem;
-    line-height: 8px;
+    line-height: 16px;
 }
 
 .social-icons {
@@ -49,7 +58,7 @@ footer {
 
 .social-icons a {
     color: var(--branco);
-    font-size: 6rem;
+    font-size: 3.8rem;
 }
 
 .social-icons a:hover {
