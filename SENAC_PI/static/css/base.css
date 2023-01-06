@@ -4,16 +4,42 @@ header{
     background-color: var(--verde-principal);
     height: 10rem;
 }
-/* colocando os link brancos */
-.nav-link{
-    font-size: 1.5rem;
-    color: var(--branco);
-}
-/* link quando ativado */
-.active{
-    border-top: 2px solid;
-    border-bottom: 2px solid;
-}
+
+/* Barra de navegação */
+.nav {
+    display: inline-flex;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  
+.nav-item {
+    color: white;
+    font-size: 15px;
+    padding: 0px 10px 5px ;
+    text-decoration: none;
+    transition: .3s;
+    margin: 0 6px;
+    z-index: 1;
+    position: relative;
+  }
+  
+.nav-item:not(.is-active):hover { color: #333; }
+  
+.nav-indicator {
+    position: absolute;
+    bottom: 0;
+    transition: .4s;
+    height: 2px;
+    z-index: 1;
+  }
+  
+  @media (max-width: 580px) {
+    .nav { overflow: auto; }
+  }
+  
+
 /* footer */
 footer {
     height: 153.38px;
