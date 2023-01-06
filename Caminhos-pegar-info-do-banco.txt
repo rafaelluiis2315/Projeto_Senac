@@ -1,0 +1,16 @@
+<!-- 
+        Caminhos para pegar info do banco
+        {{projeto.id}}
+        {{projeto.nome_projeto}}
+        {{projeto.data_inicio}}
+        {{projeto.data_entrega}}
+        {{projeto.observacao}}
+        {{projeto.texto}}
+        {{projeto.slide url}}
+        {{projeto.video url}}
+        {{projeto.foto url}}
+        {{projeto.foto_capa url}}
+        {{projeto.descricao}}
+        {{projeto.eixo_id}}
+        {{projeto.id_turma_ida}}
+-->

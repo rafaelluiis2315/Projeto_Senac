@@ -2,6 +2,7 @@
     --branco: #fff;
     --branco-gelo:  #F5F5F5;
     --verde-principal: #00D084;
+    --verde-claro: rgba(0, 208, 132, 0.2);
     --cinza-claro: #EBEBEB;
     --cinza-medio: #455A64;
     --cinza-escuro: #292A2E;
@@ -54,4 +55,12 @@ button {
     background-color: #15a570;
     transition-duration: 0.4s;
     transform: translateY(-4px);
+}
+
+.bg-cinza {
+    background-color: var(--cinza-claro);
+}
+
+.bg-verde {
+    background-color: var(--verde-claro);
 }

@@ -13,12 +13,63 @@
 {% endblock stylesheet %}
 
 {% block conteudo %}
+<main>
 
-    <!-- Pegar texto do banco-->
-    <h1>{{projeto.descricao}}</h1>
-    <!-- Pegar Imagem do banco-->
-    <img src="{{projeto.foto.url}}" alt="">
-    
+  <!-- Section principal-->
+  <section>
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="texto-section-principal">
+
+        <h1>Qualquer Coisa</h1> <!-- <h1>{{projeto.nome_projeto}}</h1> -->
+        <h2>Descrição:</h2>
+        <p>Fazer o melhor<br>trabalho possivel<br>sempre foi parte do<br>nosso trabalho.</p> <!--<p>{{projeto.descricao}}</p> -->
+
+      </div>
+
+      <div class="div-foto-detalhe">
+
+        <img class="banner-home" src="{% static 'img/img-detalhes.svg' %}" alt="Banner Home">
+
+        <div></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section Secundaria -->
+  <section class="bg-cinza">
+
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <div>
+            <h1>Detalhes</h1>
+            <h2>Quais são:</h2>
+
+            <div>
+                <h3>
+                    TURMA:<span class="bg-verde p-2 rounded-2 m-3">{{projeto.eixo}}</span> 
+                    NUMERO:<span class="bg-verde p-2 rounded-2 m-3">{{projeto.id_turma.numero_turma}}</span> 
+                    ÍNICIO:<span class="bg-verde p-2 rounded-2 m-3">{{projeto.data_inicio}}</span>
+                    TERMINO:<span class="bg-verde p-2 rounded-2 m-3">{{projeto.data_inicio}}</span>
+                </h3>  
+            </div>
+
+            <div>
+                <h2>Material:</h2>
+            </div>
+        </div>
+    </div>
+
+  <!-- Section Terciaria -->
+  </section>
+
+  <section class="bg-cinza">
+
+  </section>
+
+
+</main>
 {% endblock conteudo %}
 
 {% block conteudoDestaque %}
