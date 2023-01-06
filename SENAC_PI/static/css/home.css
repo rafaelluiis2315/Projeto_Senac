@@ -116,3 +116,18 @@ main {
     background-color: var(--verde-principal);
     height: 60.5rem;
 }
+
+.div-segunda-imagem {
+    position: relative;
+    width: 563px;
+    height: 318px;
+}
+.div-segunda-imagem div {
+    position: absolute;
+    border: var(--verde-principal) 3px solid;
+    width: inherit;
+    height: inherit;
+    border-radius: 10px;
+    top: -15px;
+    left: -15px;
+}
