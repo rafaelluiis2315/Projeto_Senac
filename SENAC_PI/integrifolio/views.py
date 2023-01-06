@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import TURMA, PROJETO, EIXO
 def index(request):
 
@@ -17,8 +17,9 @@ def index(request):
 
     return  render(request, 'index.html', contexto) 
 
-def details(request):
-    return render(request, 'detalhes.hmtl')
+def details(request,id):
+    projeto = get_object_or_404(PROJETO,id=id)
+    return render(request, 'detalhes.html', {'projeto':projeto})
 
 def login(request):
     return render(request, 'login.html')
