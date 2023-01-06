@@ -61,8 +61,10 @@ main {
     top: -15px;
     left: -15px;
 }
+
 /* Waves */
 .waves {
+    margin-top: 100px;
     position: relative;
     width: 100%;
     height: 15vh;
@@ -110,24 +112,4 @@ main {
         height: 40px;
         min-height: 40;
     }
-}
-
-.distaque{
-    background-color: var(--verde-principal);
-    height: 60.5rem;
-}
-
-.div-segunda-imagem {
-    position: relative;
-    width: 563px;
-    height: 318px;
-}
-.div-segunda-imagem div {
-    position: absolute;
-    border: var(--verde-principal) 3px solid;
-    width: inherit;
-    height: inherit;
-    border-radius: 10px;
-    top: -15px;
-    left: -15px;
 }
