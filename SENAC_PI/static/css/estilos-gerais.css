@@ -7,6 +7,10 @@
     --cinza-medio: #455A64;
     --cinza-escuro: #292A2E;
     --texto-cinza-escuro: #455A64;
+    --blue:#5207F2;
+    --red:#F23041;
+    --brown:#A88A7E;
+    --gray:#939393;
 }
 
 * {
@@ -36,6 +40,7 @@ body {
     color: var(--cinza-escuro);
 }
 
+/* Botões */
 button {
     cursor: pointer;
     border: none;
@@ -63,4 +68,54 @@ button {
 
 .bg-verde {
     background-color: var(--verde-claro);
+}
+/* textos */
+
+.text-white{
+    color: var(--branco);
+}
+
+.text-bd-white{
+    color: var(--branco);
+    font-weight: bold;
+    padding: 14px 25px 0 25px;
+}
+
+.text-blue{
+    color: var(--blue);
+}
+
+.text-bd-blue{
+    color: var(--blue); 
+    font-weight: bold;
+}
+
+.text-bd-red{
+    color: var(--red); 
+    font-weight: bold;
+}
+.text-bd-brown {
+    color: var(--brown);
+    font-weight: bold;
+}
+
+.text-bd-gray {
+    color:var(--gray);
+    font-weight: bold;
+}
+
+.card-title {
+    font-family: "Roboto";
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.c-icon {
+    margin-top: 1px;
+}
+
+/* background-color */
+
+.bg-verde{
+    background-color: var(--verde-principal);
 }
