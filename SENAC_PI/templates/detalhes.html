@@ -16,20 +16,21 @@
 <main>
 
   <!-- Section principal-->
-  <section>
+  <section class="Section-01">
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="texto-section-principal">
 
-        <h1>Qualquer Coisa</h1> <!-- <h1>{{projeto.nome_projeto}}</h1> -->
-        <h2>Descrição:</h2>
-        <p>Fazer o melhor<br>trabalho possivel<br>sempre foi parte do<br>nosso trabalho.</p> <!--<p>{{projeto.descricao}}</p> -->
+        <h1>Detalhes de Projeto</h1>
+        <h2>{{projeto.nome_projeto}}</h2>
+        <p>{{projeto.descricao}}</p>
 
       </div>
 
       <div class="div-foto-detalhe">
 
-        <img class="banner-home" src="{% static 'img/img-detalhes.svg' %}" alt="Banner Home">
+        <!-- <img class="banner-home" src="{% static 'img/img-detalhes.svg' %}" alt="Banner Home"> -->
+        <img src="{{projeto.foto.url}}" class="rounded-circle image-projeto" alt="...">
 
         <div></div>
       </div>
@@ -38,7 +39,7 @@
   </section>
 
   <!-- Section Secundaria -->
-  <section class="bg-cinza">
+  <section class="bg-cinza Section-02">
 
     <div class="container d-flex align-items-center justify-content-between">
 
@@ -48,15 +49,57 @@
 
             <div>
                 <h3>
-                    TURMA:<span class="bg-verde p-2 rounded-2 m-3">{{projeto.eixo}}</span> 
-                    NUMERO:<span class="bg-verde p-2 rounded-2 m-3">{{projeto.id_turma.numero_turma}}</span> 
-                    ÍNICIO:<span class="bg-verde p-2 rounded-2 m-3">{{projeto.data_inicio}}</span>
-                    TERMINO:<span class="bg-verde p-2 rounded-2 m-3">{{projeto.data_inicio}}</span>
+                    TURMA:<span class="bg-verde py-2 px-4 rounded-4 m-3">{{projeto.id_turma.nome_turma}}</span> 
+                    NUMERO:<span class="bg-verde py-2 px-4 rounded-4 m-3">{{projeto.id_turma.numero_turma}}</span> 
+                    ÍNICIO:<span class="bg-verde py-2 px-4 rounded-4 m-3">{{projeto.data_inicio}}</span>
+                    TERMINO:<span class="bg-verde py-2 px-4 rounded-4 m-3">{{projeto.data_inicio}}</span>
                 </h3>  
             </div>
 
+            <!-- div dos cards -->
             <div>
+
                 <h2>Material:</h2>
+
+                <div class="d-flex justify-content-between arquivos-div">
+
+                  <!-- card 01 -->
+                  <a class="bg-verde rounded-5 card-material text-white" href="{{projeto.slide.url}}" target="_blank">
+
+                    <img src="{% static 'img/slide-img.svg' %}" alt="">
+
+                    <div class="div-link">
+                      <p>Slide</p>
+                      <p>Turma: {{projeto.id_turma.numero_turma}}</p>
+                    </div>
+
+                  </a>
+
+                  <!-- card 02 -->
+                  <a class="bg-verde rounded-5 card-material text-white" href="{{projeto.video.url}}" target="_blank">
+
+                    <img src="{% static 'img/video-img.svg' %}" alt="">
+                    
+                    <div class="div-link">
+                      <p>Video</p>
+                      <p>Turma: {{projeto.id_turma.numero_turma}}</p>
+                    </div>
+                    
+                  </a>
+
+                  <!-- card 03 -->
+                  <a class="bg-verde rounded-5 card-material text-white" href="{{projeto.texto}}" target="_blank">
+                    
+                    <img src="{% static 'img/arquivo-img.svg' %}" alt="">
+
+                    <div class="div-link">
+                      <p>Texto</p>
+                      <p>Turma: {{projeto.id_turma.numero_turma}}</p>
+                    </div>
+
+                  </a>
+
+                </div>
             </div>
         </div>
     </div>
