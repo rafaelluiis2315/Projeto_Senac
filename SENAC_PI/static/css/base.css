@@ -28,6 +28,7 @@ header {
     position: relative;
   }
   
+.is-active:hover { color: var(--cinza-claro); }
 .nav-item:not(.is-active):hover { color: var(--cinza-claro); }
   
 .nav-indicator {
