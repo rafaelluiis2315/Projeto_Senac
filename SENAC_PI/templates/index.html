@@ -47,16 +47,16 @@
         </div>
 
         <p>
-          "Botânica (do grego botánē, que significa planta)<br> 
-          é uma área da Biologia voltada para o estudo das<br>  
-          plantas. Tradicionalmente, outros organismos são<br> 
+          "Botânica (do grego botánē, que significa planta)<br>
+          é uma área da Biologia voltada para o estudo das<br>
+          plantas. Tradicionalmente, outros organismos são<br>
           estudados em Botânica, tais como algas, fungos<br>
           e cianobactérias."
-          
+
         </p>
 
         <a class="mt-5 py-3 px-5 btn btn-verde" href="#">Get started</a>
-  
+
       </div>
 
       <div class="div-segunda-imagem d-flex align-items-center justify-content-between">
@@ -73,7 +73,15 @@
 
 <!-- Destaque -->
 {% block conteudoDestaque %}
+  <div class="p-4 w-auto d-flex justify-content-center">
+    <div class="text-center">
+      <iconify-icon icon="fluent:trophy-24-regular" class="text-white" style="font-size: 6.9rem"></iconify-icon>
+      <h1 class="text-bd-white" style="font-size: 3.6rem">Pojetos destaques</h1>
+    </div>
+    <div class="d-flex justify-content-center gap-5">
 
+    </div>
+  </div>
 {% endblock conteudoDestaque %}
 
 <!-- Segundo Conteudo --> 
@@ -82,30 +90,53 @@
   <main class="container mt-5 pt-5">
     <div class="d-flex justify-content-between">
       <div>
-        <h1>Todos os projetos</h1>
-        <h3>Quais são:</h3>
+        <h1><strong>Todos os projetos</strong></h1>
+        <h3><strong>Quais são:</strong></h3>
       </div>
-      <div>
-        <input type="text" name="busca">
-      </div>
-    </div>
-
-    <div>
-      <div class="card" style="width: 18rem;">
-        <img src="../media/image_jogos.png" class="card-img-top p-3" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Projeto Jogos Digitais</h5>
-          <p class="card-text">Turma 52</p>
-          <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M15.582 8V2.5H9.58203V8L12.582 11L15.582 8ZM8.08203 9.5H2.58203V15.5H8.08203L11.082 12.5L8.08203 9.5ZM9.58203 17V22.5H15.582V17L12.582 14L9.58203 17ZM17.082 9.5L14.082 12.5L17.082 15.5H22.582V9.5H17.082Z"
-              fill="white" />
-          </svg>
-
+      <form method="get">
+        <div class="input-group">
+          <input type="text" name="busca" class="form-control"  placeholder="Buscar projeto">
+          <button type="submit" class="btn btn-primary d-flex align-items-center">
+            <iconify-icon icon="ic:baseline-search" style="font-size: 1.8rem"></iconify-icon>
+          </button>
         </div>
-      </div>
+      </form>
     </div>
     
+    {% regroup projetos|dictsort:"curso" by curso as curso_list %}
+
+    {% for curso in curso_list%}
+      <div class="d-flex align-items-center gap-5  mb-5">
+        
+        <div class="bg-verde card-curso rounded-4 p-4 text-center">
+          <img src="../media/icons/curso_tec.svg" alt="">
+          <h2 class="text-bd-white">{{ curso.grouper }}</h2>
+        </div>
+        
+        <div class="d-flex gap-4">
+          {% for projeto in curso.list %}
+            
+            <a href="{% url 'Detalhes' id=projeto.id %}" class="card" style="width: 18rem;">
+              <img src="{{ projeto.foto_capa.url }}" class="card-img-top p-3" alt="foto do projeto {{ projeto.nome_projeto }}">
+              <div class="card-body">
+                <h5 class="card-title text-black">{{ projeto.nome_projeto }}</h5>
+                <div class="d-flex justify-content-between">
+                  <p class="card-text text-bd-blue mt-2">Turma {{ projeto.numero_turma }}</p>
+                  <svg class="c-icon" width="36 " height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.0820312" width="35" height="37" rx="8" fill="#F23041"/>
+                    <path d="M5.58252 15.048L8.46852 25.163C11.2065 24.76 14.3675 24.53 17.5815 24.53C20.7955 24.53 23.9565 24.76 27.0485 25.205L26.6955 25.163L29.5815 15.048C20.0795 10.823 14.4405 10.6 5.58252 15.048ZM20.5005 19.324H18.4295V21.395H16.7435V19.324H14.6725V17.638H16.7435V15.566H18.4295V17.638H20.5005V19.324Z" fill="white"/>
+                  </svg>
+                </div>
+              </div>
+            </a>
+          {% endfor %}
+
+        </div>
+        
+      </div>
+    {% endfor %}
+
+
   </main>
 </div>
 {% endblock conteudoTwo %}

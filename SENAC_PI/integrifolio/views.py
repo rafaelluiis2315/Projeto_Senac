@@ -1,21 +1,40 @@
 from django.shortcuts import render, get_object_or_404
 from .models import TURMA, PROJETO, EIXO
 def index(request):
-
-    projetos = PROJETO.objects.all()
-
-    contexto={'projetos': []}
     
-    for projeto in projetos: 
-        id = projeto.id
-        nome = projeto.nome_projeto
-        capa = projeto.foto_capa
-        eixo = projeto.eixo.nome
-        descricao = projeto.descricao
-        contexto['projetos'].append({'id': id,'nome_projeto':nome,'foto_capa':capa, 'descricao': descricao, 'eixo': eixo }) 
-        
+    query = request.GET.get('busca')
 
-    return  render(request, 'index.html', contexto) 
+    if query:
+        projeto = PROJETO.objects.filter(nome_projeto__icontains=query)
+
+        projetos_list = []
+        
+        for p in projeto: 
+            id = p.id
+            curso = p.id_turma.curso.tipo_curso.nome
+            nome = p.nome_projeto
+            numero_turma = p.id_turma.numero_turma
+            capa = p.foto_capa
+            eixo = p.eixo.nome
+            projetos_list.append({'id': id, 'curso': curso, 'nome_projeto':nome,'numero_turma': numero_turma ,'foto_capa':capa, 'eixo': eixo }) 
+    else:
+
+        projetos = PROJETO.objects.all()
+
+        projetos_list = []
+        
+        for projeto in projetos: 
+            id = projeto.id
+            curso = projeto.id_turma.curso.tipo_curso.nome
+            nome = projeto.nome_projeto
+            numero_turma = projeto.id_turma.numero_turma
+            capa = projeto.foto_capa
+            eixo = projeto.eixo.nome
+            projetos_list.append({'id': id, 'curso': curso, 'nome_projeto':nome,'numero_turma': numero_turma ,'foto_capa':capa, 'eixo': eixo }) 
+
+            
+        
+    return  render(request, 'index.html', {'projetos': projetos_list}) 
 
 def details(request,id):
     projeto = get_object_or_404(PROJETO,id=id)
