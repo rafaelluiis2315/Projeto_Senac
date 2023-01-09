@@ -124,3 +124,8 @@ main {
 .card-icon {    
     border-radius: 7px;
 }
+
+.destaque {
+    background-color: var(--verde-principal);
+    height: 60.5rem;
+}
