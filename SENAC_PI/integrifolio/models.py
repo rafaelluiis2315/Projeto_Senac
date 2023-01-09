@@ -44,7 +44,7 @@ class PROJETO(models.Model):
     data_inicio = models.DateField('Data de inicio')
     data_entrega = models.DateField('Data de entrega')
     observacao = models.TextField('Observação', max_length=500)
-    texto = models.TextField('Texto')
+    texto = models.FileField('Texto')
     slide = models.FileField('Slide')
     video = models.FileField('Video')
     foto = models.ImageField('Foto')

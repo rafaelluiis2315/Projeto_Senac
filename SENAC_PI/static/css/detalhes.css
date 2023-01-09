@@ -91,3 +91,7 @@ main {
     font-family: 'Work Sans';
     font-weight: 600;
 }
+.destaque {
+    background-color: var(--verde-principal);
+    height: 60.5rem;
+}

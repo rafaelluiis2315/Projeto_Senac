@@ -1,0 +1,37 @@
+main {
+    padding-top: 100px;
+}
+
+.div-segunda-imagem {
+    position: relative;
+    width: 456px;
+    height: 411px;  
+}
+
+.div-segunda-imagem div {
+    position: absolute;
+    border: var(--preto) 1px solid;
+    width: inherit;
+    height: inherit;
+    border-radius: 10px;
+    top: -15px;
+    left: -15px;
+}
+
+.paragrafo-sobre {
+    font-family:"Inconsolata" ;
+}
+
+.card-sobre{
+    width: 309.17px;
+    height: 422.69px;
+}
+
+.div-img{
+    border-radius: 50%;
+    width: 16.24rem;
+    height: 16.24rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

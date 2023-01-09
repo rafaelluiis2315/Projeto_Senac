@@ -1,0 +1,56 @@
+<!-- carregando arquivos -->
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- title -->
+{% block title %}
+<title>Detalhes | Integrifolio</title>
+{% endblock title %}
+
+<!-- CSS -->
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'css/sobre.css'%}">
+{% endblock stylesheet %}
+
+{% block conteudo %}
+ <main class="">
+    <div class="d-flex align-items-center justify-content-between container gap-5">
+        <div class="px-5">
+            <h1>História</h1>
+            <p class="paragrafo-sobre">Neste projeto, abordaremos os os conceitos aprendidos durante o curso e mostrar o projeto de uma empresa e todo seu design, desde uma logo até um layout de gráficos para estatísticas, home page para sites futuros, dentre outros.
+                Neste projeto, abordaremos os os conceitos aprendidos durante o curso e mostrar o projeto de uma empresa e todo seu design, desde uma logo até um layout de gráficos para estatísticas, home page para sites futuros, dentre outros.</p>
+        </div>
+        <div class="div-segunda-imagem">
+            <div>
+
+            </div>
+            <img src="{% static 'img/img_sobre.png' %}" class="rounded-3" alt="">
+        </div>
+    </div>
+    <div class="mt-5 d-flex align-items-center justify-content-between container">
+        <div class="card-sobre text-center">
+            <div class="bg-verde-principal rounded-circle text-center">
+                <img src="{% static 'icons/missao.svg' %}" alt="">
+            </div>
+            <h2>Missão</h2>
+            <p>Neste projeto, abordaremos os os conceitos aprendidos durante o curso e mostrar o projeto de uma empresa e </p>
+        </div>
+        <div class="card-sobre text-center">
+            <div class="bg-verde-principal rounded-circle text-center"> 
+                <img src="{% static 'icons/valores.svg' %}" alt="">
+            </div>
+            <h2>Valores</h2>
+            <p>Neste projeto, abordaremos os os conceitos aprendidos durante o curso e mostrar o projeto de uma empresa e </p>
+        </div>
+        <div class="card-sobre text-center">
+            <div class="bg-verde-principal div-img">
+                <img src="{% static 'icons/principios.svg' %}" alt="">
+            </div>
+            <h2>Princípios</h2>
+            <p>Neste projeto, abordaremos os os conceitos aprendidos durante o curso e mostrar o projeto de uma empresa e </p>
+
+        </div>
+    </div>
+ </main>
+{% endblock conteudo %}
+

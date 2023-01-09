@@ -51,3 +51,6 @@ def eixo(request):
 
 def cadastro(request):
     return render(request, 'cadastro.html')
+
+def sobre(request):
+    return render(request,'sobre.html')
