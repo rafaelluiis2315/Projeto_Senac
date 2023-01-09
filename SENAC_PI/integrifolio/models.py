@@ -1,10 +1,28 @@
 from django.db import models
 
 # Create your models here.
+
+class TipoCurso(models.Model):
+    id = models.AutoField(primary_key=True)
+    nome = models.CharField(max_length=50, unique=True, null=False)
+
+    def __str__(self) -> str:
+        return self.nome
+
+class CURSO(models.Model):
+    id = models.AutoField(primary_key=True)
+    nome = models.CharField(max_length=50, unique=True, null=False)
+    carga_horaria = models.IntegerField()
+    tipo_curso = models.ForeignKey(TipoCurso, on_delete=models.CASCADE)
+    
+    def __str__(self) -> str:
+        return self.nome
+
 class TURMA(models.Model):
     id_turma = models.AutoField(primary_key=True)
     nome_turma = models.CharField('Nome da turma',max_length=255)
     numero_turma = models.IntegerField('Numero da turma')
+    curso = models.ForeignKey(CURSO, on_delete=models.CASCADE)
     data_inicio = models.DateField('Data de Inicio')
     data_termino = models.DateField('Data de termino')
     nome_professor = models.CharField('Nome do Professor', max_length=255, )
@@ -12,10 +30,6 @@ class TURMA(models.Model):
 
     def __str__(self) -> str:
         return self.nome_turma
-
-
-
-    
 
 class EIXO(models.Model):
     id = models.AutoField(primary_key=True)

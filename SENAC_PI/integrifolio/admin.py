@@ -4,3 +4,5 @@ from . import models
 admin.site.register(models.TURMA)
 admin.site.register(models.PROJETO)
 admin.site.register(models.EIXO)
+admin.site.register(models.CURSO)
+admin.site.register(models.TipoCurso)

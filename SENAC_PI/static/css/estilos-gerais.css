@@ -1,5 +1,6 @@
 :root {
     --branco: #fff;
+    --preto: #000000;
     --branco-gelo:  #F5F5F5;
     --verde-principal: #00D084;
     --verde-claro: rgba(0, 208, 132, 0.2);
@@ -78,7 +79,15 @@ button {
 .text-bd-white{
     color: var(--branco);
     font-weight: bold;
-    padding: 14px 25px 0 25px;
+}
+
+.text-black{
+    color: var(--preto);
+}
+
+.text-bd-black{
+    color: var(--preto);
+    font-weight: bold;
 }
 
 .text-blue{
