@@ -1,24 +1,14 @@
-// Animação para a navbar
-
+// Navbar dinamica
 const indicator = document.querySelector('.nav-indicator');
 const items = document.querySelectorAll('.nav-item');
 
-function handleIndicator(el) {
-  items.forEach(item => {
-    item.classList.remove('is-active');
-    item.removeAttribute('style');
-  });
-  
-indicator.style.width = `${el.offsetWidth}px`;
-indicator.style.left = `${el.offsetLeft}px`;
-indicator.style.backgroundColor = el.getAttribute('active-color');
+const url_atual = window.location.href;
 
-el.classList.add('is-active');
-el.style.color = el.getAttribute('active-color');
-}
+function defaultActiveLink() {
+	items[0].classList.add('is-active');
+	indicator.style.width = `${items[0].offsetWidth}px`;
+	indicator.style.left = `${items[0].offsetLeft}px`;
+	indicator.style.backgroundColor = items[0].getAttribute('active-color');
+};
 
-
-items.forEach((item, index) => {
-  item.addEventListener('click', (e) => { handleIndicator(e.target)});
-  item.classList.contains('is-active') && handleIndicator(item);
-});
+defaultActiveLink();
