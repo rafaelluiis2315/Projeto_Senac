@@ -16,7 +16,9 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+
     <link href="https://fonts.googleapis.com/css?family=Inder&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lexend&display=swap" rel="stylesheet">
 
@@ -34,7 +36,7 @@
 
     <!-- title -->
     {% block title %}
-    <title>Integrifolio</title>
+        <title>Integrifolio</title>
     {% endblock title %}
 
 </head>
@@ -46,27 +48,21 @@
         <nav class="navbar navbar-expand navbar-dark col-12">
             <div class="container">
                 <div>
-                    <img class="logo" src="{% static 'img/logo.png'%}" alt="logo">
+                    <img src="{% static 'img/logo.png'%}" alt="logo">
                 </div>
                 <div class="d-flex justify-content-end">
-                    <div class="navbar-nav">
-                        <div class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </div>
-                        <div class="nav-item ">
-                            <a class="nav-link " href="#">Projetos</a>
-                        </div>
-                        <div class="nav-item">
-                            <a class="nav-link " href="#">Sobre</a>
-                        </div>
-                        <div class="nav-item">
-                            <a class="nav-link " href="#">Empressa</a>
-                        </div>
-                    </div>
+                    <nav class="nav">
+                        <a href="{% url 'Home' %}" class="nav-item" active-color="white" aria-current="page">Home</a>
+                        <a href="#" class="nav-item" active-color="white">Projetos</a>
+                        <a href="#" class="nav-item" active-color="white">Sobre</a>
+                        <a href="#" class="nav-item" active-color="white">Empresa</a>
+                        <span class="nav-indicator"></span>
+                    </nav> 
                 </div>
             </div>
         </nav>
     </header>
+
 
     <!-- Main -->
     {% block conteudo %}
@@ -90,7 +86,7 @@
             </svg>
         </div><!--wave end-->
 
-        <div class="destaque ">
+        <div class="destaque">
             {% block conteudoDestaque %}
 
             {% endblock conteudoDestaque %}

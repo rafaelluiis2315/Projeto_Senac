@@ -1,13 +1,14 @@
-// Active navbar
-var navbar = document.getElementsByClassName('nav-link');
+// Navbar dinamica
+const indicator = document.querySelector('.nav-indicator');
+const items = document.querySelectorAll('.nav-item');
 
-[...navbar].forEach(element => {
-    element.addEventListener('click', function (Event) {
-        [...navbar].forEach(elemento => {
-            elemento.className = 'nav-link'
-        });
+const url_atual = window.location.href;
 
-        Event.target.classList.add('active');
+function defaultActiveLink() {
+	items[0].classList.add('is-active');
+	indicator.style.width = `${items[0].offsetWidth}px`;
+	indicator.style.left = `${items[0].offsetLeft}px`;
+	indicator.style.backgroundColor = items[0].getAttribute('active-color');
+};
 
-    })
-});
+defaultActiveLink();
