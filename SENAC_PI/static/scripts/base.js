@@ -1,13 +1,24 @@
-// Active navbar
-var navbar = document.getElementsByClassName('nav-link');
+// Animação para a navbar
 
-[...navbar].forEach(element => {
-    element.addEventListener('click', function (Event) {
-        [...navbar].forEach(elemento => {
-            elemento.className = 'nav-link'
-        });
+const indicator = document.querySelector('.nav-indicator');
+const items = document.querySelectorAll('.nav-item');
 
-        Event.target.classList.add('active');
+function handleIndicator(el) {
+  items.forEach(item => {
+    item.classList.remove('is-active');
+    item.removeAttribute('style');
+  });
+  
+indicator.style.width = `${el.offsetWidth}px`;
+indicator.style.left = `${el.offsetLeft}px`;
+indicator.style.backgroundColor = el.getAttribute('active-color');
 
-    })
+el.classList.add('is-active');
+el.style.color = el.getAttribute('active-color');
+}
+
+
+items.forEach((item, index) => {
+  item.addEventListener('click', (e) => { handleIndicator(e.target)});
+  item.classList.contains('is-active') && handleIndicator(item);
 });
