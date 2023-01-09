@@ -8,9 +8,47 @@ header {
     z-index: 1;
 }
 
-/* Barra de navegação */
+.logo {
+    margin-top: 15%;
+}
+
 .nav {
     display: inline-flex;
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  
+.nav-item {
+    color: white;
+    font-size: 15px;
+    padding: 0px 10px 5px ;
+    text-decoration: none;
+    transition: .3s;
+    margin: 0 6px;
+    z-index: 1;
+    position: relative;
+  }
+  
+.nav-item:not(.is-active):hover 
+    { color: var(--cinza-claro); }
+  
+.nav-indicator {
+    position: absolute;
+    bottom: 0;
+    transition: .4s;
+    height: 2px;
+    z-index: 1;
+  }
+  
+  @media (max-width: 580px) {
+    .nav { overflow: auto; }
+  }
+  
+
+/* configurção das ondas */
+.waves {
     position: relative;
     overflow: hidden;
     max-width: 100%;
