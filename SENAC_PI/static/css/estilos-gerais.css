@@ -63,13 +63,6 @@ button {
     transform: translateY(-4px);
 }
 
-.bg-cinza {
-    background-color: var(--cinza-claro);
-}
-
-.bg-verde {
-    background-color: var(--verde-claro);
-}
 /* textos */
 
 .text-white{
@@ -125,6 +118,10 @@ button {
 
 /* background-color */
 
-.bg-verde{
-    background-color: var(--verde-principal);
+.bg-cinza {
+    background-color: var(--cinza-claro);
+}
+
+.bg-verde {
+    background-color: var(--verde-claro);
 }
