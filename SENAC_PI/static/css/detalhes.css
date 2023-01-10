@@ -42,6 +42,8 @@ main {
 
 .Section-02 {
     padding: 75px;
+    padding-bottom: 300px;
+    margin-bottom: -200px;
 }
 
 .Section-02 h1 {
@@ -64,9 +66,40 @@ main {
     line-height: 30px;
 }
 
+.div-title-detalhes{
+    position: relative;
+}
+
+.sp-01 {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    top: -1%;
+    left: -10%;
+}
+
+/* Media query */
+@media screen and (max-width: 1200px) {
+    .sp-01 {
+      left: -20%;
+    }
+}
+
+.div-title-detalhes .sp-02 {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    top: -1%;
+    left: 110%;
+}
+
 .image-projeto {
     width: 366px;
     height: 352px;
+}
+
+.arquivos-div {
+    position: relative;
 }
 
 .arquivos-div img {
@@ -74,16 +107,32 @@ main {
     width: 350px;
 }
 
+.arquivos-div .sp-03 {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    bottom: -125px;
+    right: 50px;
+}
+
 .div-link {
     background-color: var(--verde-principal);
     border-radius: 0 0 15px 15px;
     padding: 15px;
+}
 
+.div-link .p1 {
     font-family: 'Work Sans';
     font-weight: 800;
     font-size: 1.6rem;
     line-height: 140%;
     text-transform: capitalize;
+}
+
+.div-link .p2 {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 110%;
 }
 
 .card-material {
