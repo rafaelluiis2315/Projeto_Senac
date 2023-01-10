@@ -51,6 +51,13 @@ class PROJETO(models.Model):
     foto_capa = models.ImageField('Foto de capa')
     descricao = models.TextField('Descrição')
     eixo = models.ForeignKey(EIXO, on_delete=models.CASCADE, related_name='Projeto')
+    
+    DESTAQUE_CHOICE=(
+        ("F", "Falso"),
+        ("v", "Verdeiro"),
+    )
+
+    destaque = models.CharField(max_length=2, choices=DESTAQUE_CHOICE)
 
     def __str__(self) -> str:
         return self.nome_projeto

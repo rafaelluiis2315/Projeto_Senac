@@ -32,9 +32,9 @@ def index(request):
             eixo = projeto.eixo.nome
             projetos_list.append({'id': id, 'curso': curso, 'nome_projeto':nome,'numero_turma': numero_turma ,'foto_capa':capa, 'eixo': eixo }) 
 
-            
+    destaques = PROJETO.objects.filter(destaque="v")
         
-    return  render(request, 'index.html', {'projetos': projetos_list}) 
+    return  render(request, 'index.html', {'projetos': projetos_list, 'destaques': destaques}) 
 
 def details(request,id):
     projeto = get_object_or_404(PROJETO,id=id)

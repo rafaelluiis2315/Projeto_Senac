@@ -1,5 +1,5 @@
 main {
-    padding-top: 100px;
+    padding-top: 150px;
 }
 
 .div-segunda-imagem {
@@ -23,15 +23,31 @@ main {
 }
 
 .card-sobre{
-    width: 309.17px;
-    height: 422.69px;
+    width: 30.9rem;
+    height: 30.1rem;
 }
 
-.div-img{
-    border-radius: 50%;
-    width: 16.24rem;
+.container-img{
+    width: auto;
     height: 16.24rem;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.destaque {
+    height: 47.5rem;
+}
+
+.text-destaques-sobre{
+    font-size: 3.6rem;
+}
+
+.div-logo-destaque-sobre{
+    width: 209px;
+    height: 121px;
+}
+
+.logo-destaque-sobre{
+    width: 100%;   
 }

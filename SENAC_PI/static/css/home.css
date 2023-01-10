@@ -76,3 +76,26 @@ main {
 .destaque {
     height: 60.5rem;
 }
+.cards-destaque{
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.card-destaque{
+    text-decoration: none;
+}
+
+.div-destaque-img {
+    position: relative;
+    width: 160px;
+    height: 130px;
+}
+.div-destaque-img div {
+    position: absolute;
+    border: var(--branco) 1px solid;
+    width: inherit;
+    height: inherit;
+    border-radius: 10px;
+    top: -15px;
+    left: -15px;
+}
