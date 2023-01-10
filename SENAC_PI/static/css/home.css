@@ -73,12 +73,9 @@ main {
     border-radius: 7px;
 }
 
-.destaque {
-    height: 60.5rem;
-}
 .cards-destaque{
-    margin-top: 10%;
-    margin-bottom: 5%;
+    margin-top: 6%;
+    padding-bottom: 4%;
 }
 
 .card-destaque{
@@ -98,4 +95,16 @@ main {
     border-radius: 10px;
     top: -15px;
     left: -15px;
+}
+
+.div-icon-eixo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    width: 35px;
+    height: 37px;
+    border-radius: 8px;
+    color: var(--branco);
 }

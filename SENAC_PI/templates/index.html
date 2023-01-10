@@ -73,7 +73,7 @@
 
 <!-- Destaque -->
 {% block conteudoDestaque %}
-  <div class="p-4 w-auto">
+  <div class="w-auto">
     <div class="text-center mb-5">
       <iconify-icon icon="fluent:trophy-24-regular" class="text-white" style="font-size: 6.9rem"></iconify-icon>
       <h1 class="text-bd-white" style="font-size: 3.6rem">Pojetos destaques</h1>
@@ -123,7 +123,7 @@
         
         <div class="bg-verde-principal card-curso rounded-4 p-4 text-center">
           <img src="{% static 'icons/curso_tec.svg' %}" alt="">
-          <h2 class="text-bd-white">{{ curso.grouper }}</h2>
+          <h2 class="text-bd-white">Curso {{ curso.grouper }}</h2>
         </div>
         
         <div class="d-flex gap-4">
@@ -134,11 +134,10 @@
               <div class="card-body">
                 <h5 class="card-title text-black">{{ projeto.nome_projeto }}</h5>
                 <div class="d-flex justify-content-between">
-                  <p class="card-text text-bd-blue mt-2">Turma {{ projeto.numero_turma }}</p>
-                  <svg class="c-icon" width="36 " height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="0.0820312" width="35" height="37" rx="8" fill="#F23041"/>
-                    <path d="M5.58252 15.048L8.46852 25.163C11.2065 24.76 14.3675 24.53 17.5815 24.53C20.7955 24.53 23.9565 24.76 27.0485 25.205L26.6955 25.163L29.5815 15.048C20.0795 10.823 14.4405 10.6 5.58252 15.048ZM20.5005 19.324H18.4295V21.395H16.7435V19.324H14.6725V17.638H16.7435V15.566H18.4295V17.638H20.5005V19.324Z" fill="white"/>
-                  </svg>
+                  <p class="card-text mt-2" style="font-weight: bold; color: {{ projeto.eixo_color }};">Turma {{ projeto.numero_turma }}</p>
+                  <div class="div-icon-eixo" style="background-color: {{ projeto.eixo_color }};">
+                    <iconify-icon icon="{{ projeto.eixo_icon }}" style="font-size: 1.8rem"></iconify-icon>
+                  </div>
                 </div>
               </div>
             </a>

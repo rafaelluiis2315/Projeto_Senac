@@ -30,7 +30,9 @@ def index(request):
             numero_turma = projeto.id_turma.numero_turma
             capa = projeto.foto_capa
             eixo = projeto.eixo.nome
-            projetos_list.append({'id': id, 'curso': curso, 'nome_projeto':nome,'numero_turma': numero_turma ,'foto_capa':capa, 'eixo': eixo }) 
+            eixo_color = projeto.eixo.color
+            eixo_icon = projeto.eixo.icons
+            projetos_list.append({'id': id, 'curso': curso, 'nome_projeto':nome,'numero_turma': numero_turma ,'foto_capa':capa, 'eixo': eixo, 'eixo_color': eixo_color, 'eixo_icon':eixo_icon}) 
 
     destaques = PROJETO.objects.filter(destaque="v")
         
