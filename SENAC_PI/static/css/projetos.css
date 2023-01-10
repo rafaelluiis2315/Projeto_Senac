@@ -1,4 +1,5 @@
 main{
+    font-family: 'Inder';
     padding-top: 150px;
 }
 
@@ -8,4 +9,85 @@ main{
 
 .title-projetos{
     font-size: 4.5rem;
+}
+
+.secao-projeto {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.filtro-eixos {
+    height: 40px;
+    width: 100%;
+}
+
+.filtro-eixos div {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--verde-claro);
+    width: 110px;
+    height: 36px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.filtro-eixos div:hover {
+    background-color: var(--verde-principal);
+    transition-duration: 0.2s;
+}
+
+.div-cards-projetos {
+    width: 100%;
+    height: 500px;
+}
+
+.card-projetos {
+    width: 278.95px;
+    height: 195px;
+    background-color: var(--branco);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cp-bg-img {
+    border-radius: 15px 15px 0 0;
+    background-color: aliceblue;
+    width: 100%;
+    height: 68%;
+    background-image: url(https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=749&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -130px;
+}
+
+.cp-text {
+    padding-top: 8px;
+    padding-left: 12px;
+    text-align: left;
+    line-height: 2px;
+}
+
+.cp-text h2 {
+    font-family: 'Inter';
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.cp-text span {
+    font-size: 1.2rem;
+}
+
+.div-icon-eixo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    width: 35px;
+    height: 37px;
+    border-radius: 8px;
+    color: var(--branco);
 }

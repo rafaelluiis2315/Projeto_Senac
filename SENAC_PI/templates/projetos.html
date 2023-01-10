@@ -14,10 +14,12 @@
 
 {% block conteudo %}
 <main>
+
     <div class="container d-flex align-items-center gap-5 div-title">
         <h1 class="title-projetos">Lista de Projetos</h1>
         <img src="{% static 'img/list-project.png' %}" alt="">
     </div>
+
     <div class="d-flex justify-content-center">
         <form method="get" class="col-4">
             <div class="input-group">
@@ -26,6 +28,7 @@
             </div>  
         </form>
     </div>
+    
     <div class="mt-5 d-flex align-items-center container">
         <div class="card-sobre w-25">
             <form method="get">
@@ -50,9 +53,99 @@
                 <button class="btn btn-verde" type="submit">Filtrar</button>
             </form>
         </div>
-        <div class="card-sobre text-center w-75">
-            <h1>Projetos</h1>
+
+        <!-- secao projeto -->
+        <div class="secao-projeto d-flex flex-column align-items-center gap-5">
+            <!-- projetos -->
+            <div class="card-sobre text-center w-75">
+                <h1>Projetos</h1>
+            </div>
+
+            <!-- filtro de eixos -->
+            <div class="filtro-eixos d-flex justify-content-between align-items-center">
+                <div><span>Design</span></div>
+                <div><span>Turismo</span></div>
+                <div><span>Gestão</span></div>
+                <div><span>Tecnologia</span></div>
+                <div><span>Segurança</span></div>
+                <div><span>Saúde</span></div>
+                <div><span>Educacional</span></div>
+                <div><span>Moda</span></div>
+            </div>
+
+            <!-- cards projetos -->
+            <div class="div-cards-projetos d-flex flex-wrap justify-content-between">
+
+                <!-- card -->
+                <div class="card-projetos">
+                    <div class="cp-bg-img"></div>
+                    
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="cp-text">
+                            <h2>Distant Galaxy</h2>
+                            <span>Turma 58</span>
+                        </div>
+
+                        <div class="div-icon-eixo" style="background-color: {{ projeto.eixo_color }};">
+                            <iconify-icon icon="{{ projeto.eixo_icon }}" style="font-size: 1.8rem"></iconify-icon>
+                          </div>
+                    </div>
+                </div>
+
+                <!-- card -->
+                <div class="card-projetos">
+                    <div class="cp-bg-img"></div>
+                    
+                    <div class="cp-text">
+                        <h2>Distant Galaxy</h2>
+                        <span>Turma 58</span>
+                    </div>
+                </div>
+
+                <!-- card -->
+                <div class="card-projetos">
+                    <div class="cp-bg-img"></div>
+                    
+                    <div class="cp-text">
+                        <h2>Distant Galaxy</h2>
+                        <span>Turma 58</span>
+                    </div>
+                </div>
+
+                <!-- card -->
+                <div class="card-projetos">
+                    <div class="cp-bg-img"></div>
+                    
+                    <div class="cp-text">
+                        <h2>Distant Galaxy</h2>
+                        <span>Turma 58</span>
+                    </div>
+                </div>
+
+                <!-- card -->
+                <div class="card-projetos">
+                    <div class="cp-bg-img"></div>
+                    
+                    <div class="cp-text">
+                        <h2>Distant Galaxy</h2>
+                        <span>Turma 58</span>
+                    </div>
+                </div>
+
+                <!-- card -->
+                <div class="card-projetos">
+                    <div class="cp-bg-img"></div>
+                    
+                    <div class="cp-text">
+                        <h2>Distant Galaxy</h2>
+                        <span>Turma 58</span>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
+
     </div>
 </main>
 {% endblock conteudo %}
