@@ -1,0 +1,89 @@
+<!-- carregando arquivos -->
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- title -->
+{% block title %}
+<title>Detalhes | Integrifolio</title>
+{% endblock title %}
+
+<!-- CSS -->
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'css/sobre.css'%}">
+{% endblock stylesheet %}
+
+{% block conteudo %}
+<main>
+    <div class="d-flex align-items-center justify-content-between container gap-5">
+        <div class="px-5">
+            <h1>História</h1>
+            <p class="paragrafo-sobre">Neste projeto, abordaremos os os conceitos aprendidos durante o curso e mostrar o
+                projeto de uma empresa e todo seu design, desde uma logo até um layout de gráficos para estatísticas,
+                home page para sites futuros, dentre outros.
+                Neste projeto, abordaremos os os conceitos aprendidos durante o curso e mostrar o projeto de uma empresa
+                e todo seu design, desde uma logo até um layout de gráficos para estatísticas, home page para sites
+                futuros, dentre outros.</p>
+        </div>
+        <div class="div-segunda-imagem">
+            <div>
+
+            </div>
+            <img src="{% static 'img/img_sobre.png' %}" class="rounded-3" alt="">
+        </div>
+    </div>
+    <div class="mt-5 d-flex align-items-center justify-content-between container">
+        <div class="card-sobre text-center">
+            <div class="container-img mb-2">
+                <div class="bg-verde-principal rounded-circle text-center p-5">
+                    <img src="{% static 'icons/missao.svg' %}" alt="">
+                </div>
+            </div>
+            <h2>Missão</h2>
+            <p>Neste projeto, abordaremos os os conceitos aprendidos durante o curso e mostrar o projeto de uma empresa
+                e </p>
+        </div>
+        <div class="card-sobre text-center">
+            <div class="container-img mb-2">
+                <div class="bg-verde-principal rounded-circle p-5">
+                    <img src="{% static 'icons/valores.svg' %}" alt="">
+                </div>
+            </div>
+            <h2>Valores</h2>
+            <p>Neste projeto, abordaremos os os conceitos aprendidos durante o curso e mostrar o projeto de uma empresa
+                e </p>
+        </div>
+        <div class="card-sobre text-center">
+            <div class="container-img mb-2">
+                <div class="bg-verde-principal rounded-circle p-5">
+                    <img src="{% static 'icons/principios.svg' %}" alt="">
+                </div>
+            </div>
+            <h2>Princípios</h2>
+            <p>Neste projeto, abordaremos os os conceitos aprendidos durante o curso e mostrar o projeto de uma empresa
+                e </p>
+        </div>
+    </div>
+</main>
+{% endblock conteudo %}
+
+{% block conteudoDestaque %}
+    <div class="destaque pt-4">
+        <div class="w-100 mb-5 d-flex align-items-center justify-content-center text-bd-white">
+            <h1><strong>Localização e informações adicionais</strong></h1>    
+            <iconify-icon icon="material-symbols:location-on" width="50px"
+            height="51px" ></iconify-icon>    
+        </div>
+        <div class="d-flex align-items-start justify-content-around">
+            <div class="">
+                <h2 class="text-bd-white text-destaques-sobre mb-5">Saiba mais:</h2>
+                <div class="div-logo-destaque-sobre">
+                    <img src="{% static 'img/logo.png' %}"  class="logo-destaque-sobre" alt="">
+                </div>
+            </div>
+            <div>
+                <h2 class="text-bd-white text-destaques-sobre mb-5">Onde Estamos?</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.3754851274007!2d-34.876112885558165!3d-8.063128194194393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18a3179eebef%3A0x7caecfbcc5347f69!2sPorto%20Digital%20-%20NGPD%20(N%C3%BAcleo%20de%20Gest%C3%A3o%20do%20Porto%20Digital)!5e0!3m2!1spt-BR!2sbr!4v1673314469593!5m2!1spt-BR!2sbr" width="287" height="191" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+{% endblock conteudoDestaque %}

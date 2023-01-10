@@ -122,6 +122,10 @@ button {
     background-color: var(--cinza-claro);
 }
 
+.bg-verde-principal {
+    background-color: var(--verde-principal);
+}
+
 .bg-verde {
     background-color: var(--verde-claro);
 }

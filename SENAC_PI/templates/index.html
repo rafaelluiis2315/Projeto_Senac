@@ -73,13 +73,26 @@
 
 <!-- Destaque -->
 {% block conteudoDestaque %}
-  <div class="p-4 w-auto d-flex justify-content-center">
-    <div class="text-center">
+  <div class="p-4 w-auto">
+    <div class="text-center mb-5">
       <iconify-icon icon="fluent:trophy-24-regular" class="text-white" style="font-size: 6.9rem"></iconify-icon>
       <h1 class="text-bd-white" style="font-size: 3.6rem">Pojetos destaques</h1>
     </div>
-    <div class="d-flex justify-content-center gap-5">
-
+    <div class="cards-destaque container d-flex justify-content-around">
+      {% for projeto in destaques %}
+        <a href="{% url 'Detalhes' id=projeto.id %}" class="card-destaque text-center">
+          <div class="div-destaque-img">
+            <div>
+    
+            </div>
+            <img src="{{ projeto.foto_capa.url }}" class="card-img-top" alt="foto do projeto {{ projeto.nome_projeto }}">
+          </div>  
+          <div class="card-body mt-4">
+            <h5 class="card-title text-bd-white"><b>{{ projeto.nome_projeto }}</b></h5>
+            <p class="text-white mt-2">{{ projeto.descricao }}</p>
+          </div>
+        </a>
+      {% endfor %}
     </div>
   </div>
 {% endblock conteudoDestaque %}
@@ -108,8 +121,8 @@
     {% for curso in curso_list%}
       <div class="d-flex align-items-center gap-5  mb-5">
         
-        <div class="bg-verde card-curso rounded-4 p-4 text-center">
-          <img src="../media/icons/curso_tec.svg" alt="">
+        <div class="bg-verde-principal card-curso rounded-4 p-4 text-center">
+          <img src="{% static 'icons/curso_tec.svg' %}" alt="">
           <h2 class="text-bd-white">{{ curso.grouper }}</h2>
         </div>
         
@@ -135,6 +148,7 @@
         
       </div>
     {% endfor %}
+
 
 
   </main>

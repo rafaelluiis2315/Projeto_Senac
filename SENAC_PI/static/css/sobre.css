@@ -1,0 +1,53 @@
+main {
+    padding-top: 150px;
+}
+
+.div-segunda-imagem {
+    position: relative;
+    width: 456px;
+    height: 411px;  
+}
+
+.div-segunda-imagem div {
+    position: absolute;
+    border: var(--preto) 1px solid;
+    width: inherit;
+    height: inherit;
+    border-radius: 10px;
+    top: -15px;
+    left: -15px;
+}
+
+.paragrafo-sobre {
+    font-family:"Inconsolata" ;
+}
+
+.card-sobre{
+    width: 30.9rem;
+    height: 30.1rem;
+}
+
+.container-img{
+    width: auto;
+    height: 16.24rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.destaque {
+    height: 47.5rem;
+}
+
+.text-destaques-sobre{
+    font-size: 3.6rem;
+}
+
+.div-logo-destaque-sobre{
+    width: 209px;
+    height: 121px;
+}
+
+.logo-destaque-sobre{
+    width: 100%;   
+}

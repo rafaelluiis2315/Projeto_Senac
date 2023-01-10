@@ -44,13 +44,20 @@ class PROJETO(models.Model):
     data_inicio = models.DateField('Data de inicio')
     data_entrega = models.DateField('Data de entrega')
     observacao = models.TextField('Observação', max_length=500)
-    texto = models.TextField('Texto')
+    texto = models.FileField('Texto')
     slide = models.FileField('Slide')
     video = models.FileField('Video')
     foto = models.ImageField('Foto')
     foto_capa = models.ImageField('Foto de capa')
     descricao = models.TextField('Descrição')
     eixo = models.ForeignKey(EIXO, on_delete=models.CASCADE, related_name='Projeto')
+    
+    DESTAQUE_CHOICE=(
+        ("F", "Falso"),
+        ("v", "Verdeiro"),
+    )
+
+    destaque = models.CharField(max_length=2, choices=DESTAQUE_CHOICE)
 
     def __str__(self) -> str:
         return self.nome_projeto

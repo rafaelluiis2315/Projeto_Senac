@@ -5,7 +5,7 @@ header {
     height: 10rem;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 50;
 }
 
 /* Barra de navegação */
@@ -15,7 +15,7 @@ header {
     overflow: hidden;
     max-width: 100%;
     padding: 0 20px;
-  }
+}
   
 .nav-item {
     color: white;
@@ -26,7 +26,7 @@ header {
     margin: 0 6px;
     z-index: 1;
     position: relative;
-  }
+}
   
 .is-active:hover { color: var(--cinza-claro); }
 .nav-item:not(.is-active):hover { color: var(--cinza-claro); }
@@ -106,3 +106,54 @@ footer {
     font-size: 1.8rem;
 }
 
+/* Waves */
+.waves {
+    margin-top: 100px;
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    min-height: 100px;
+    max-height: 150px;
+}
+
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+@media (max-width: 768px) {
+    .waves {
+        height: 40px;
+        min-height: 40;
+    }
+}
