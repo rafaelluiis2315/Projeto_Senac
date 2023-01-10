@@ -9,11 +9,15 @@
 
 <!-- CSS -->
 {% block stylesheet %}
-<link rel="stylesheet" href="{% static 'css/sobre.css'%}">
+<link rel="stylesheet" href="{% static 'css/projetos.css'%}">
 {% endblock stylesheet %}
 
 {% block conteudo %}
 <main>
+    <div class="container d-flex align-items-center gap-5 div-title">
+        <h1 class="title-projetos">Lista de Projetos</h1>
+        <img src="{% static 'img/list-project.png' %}" alt="">
+    </div>
     <div class="d-flex justify-content-center">
         <form method="get" class="col-4">
             <div class="input-group">
@@ -22,22 +26,22 @@
             </div>  
         </form>
     </div>
-    <div class="mt-5 d-flex align-items-center justify-content-between container">
-        <div class="card-sobre text-center">
-            <form method="get" class="col-4">
-                <div class="mb-4 d-flex">
+    <div class="mt-5 d-flex align-items-center container">
+        <div class="card-sobre w-25">
+            <form method="get">
+                <div class="mb-4 d-flex gap-4">
                     <label for="">Modalidade do curso:</label>
-                    <select class="form-select" name="tipy_curso">
-                        <option selected>Open this select menu</option>
+                    <select class="form-select w-25" name="tipy_curso">
+                        <option selected>Curso</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
                     </select>
                 </div>  
-                <div class="mb-4 d-flex">
+                <div class="mb-4 d-flex gap-4">
                     <label for="">Eixo do curso:</label>
-                    <select class="form-select" name="eixo">
-                        <option selected>Open this select menu</option>
+                    <select class="form-select w-25" name="eixo">
+                        <option selected>Eixo</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
@@ -46,7 +50,7 @@
                 <button class="btn btn-verde" type="submit">Filtrar</button>
             </form>
         </div>
-        <div class="card-sobre text-center">
+        <div class="card-sobre text-center w-75">
             <h1>Projetos</h1>
         </div>
     </div>
