@@ -98,10 +98,13 @@ main{
 
 .div-cards-projetos {
     width: 100%;
-    height: 500px;
+    height: 80%;
 }
 
 .card-projetos {
+    text-decoration: none;
+    color: var(--preto);
+    cursor: pointer;
     width: 278.95px;
     height: 195px;
     background-color: var(--branco);
@@ -109,15 +112,18 @@ main{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.card-projetos:hover {
+    color: var(--verde-principal);
+}
+
 .cp-bg-img {
     border-radius: 15px 15px 0 0;
     background-color: aliceblue;
     width: 100%;
     height: 68%;
-    background-image: url(https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=749&q=80);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center -130px;
+    background-position: center -70px;
 }
 
 .cp-text {

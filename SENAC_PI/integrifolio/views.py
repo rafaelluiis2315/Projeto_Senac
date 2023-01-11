@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import TURMA, PROJETO, EIXO
+from .models import TURMA, PROJETO, EIXO, TipoCurso, CURSO
 def index(request):
     
     query = request.GET.get('busca')
@@ -58,7 +58,28 @@ def sobre(request):
     return render(request,'sobre.html')
 
 def projetos(request):
-    return render(request, 'projetos.html')
+    query = request.GET.get('buscar')
+    query_curso = request.GET.get('tipy_curso')
+    query_eixo = request.GET.get('eixo')
+
+    if query:
+        projetos = PROJETO.objects.filter(nome_projeto__icontains=query)
+
+    if query_eixo and query_curso and query_eixo != 'Eixo':
+        projetos = PROJETO.objects.filter(eixo=query_eixo, id_turma__curso__tipo_curso=query_curso)
+    elif query_eixo and query_eixo != 'Eixo':
+        projetos = PROJETO.objects.filter(eixo=query_eixo)
+    elif query_curso:
+        projetos = PROJETO.objects.filter(id_turma__curso__tipo_curso=query_curso)
+    elif not query:   
+        projetos = PROJETO.objects.all()
+    
+    eixos = EIXO.objects.all()
+    cursos = TipoCurso.objects.all()
+
+
+
+    return render(request, 'projetos.html', {'projetos': projetos, 'eixos':eixos, 'cursos':cursos})
 
 def login(request):
     return render(request, 'login.html')
