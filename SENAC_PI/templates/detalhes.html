@@ -16,14 +16,14 @@
 <main>
 
   <!-- Section principal-->
-  <section class="Section-01">
-    <div class="container d-flex align-items-center justify-content-between">
+  <section class="Section-01 mb-5">
+    <div class="container d-lg-flex align-items-center justify-content-between ">
 
       <div class="texto-section-principal">
 
         <h1>Detalhes de Projeto</h1>
         <h2>{{projeto.nome_projeto}}</h2>
-        <p>{{projeto.descricao}}</p>
+        <p class="fs-1">{{projeto.descricao}}</p>
 
       </div>
 
@@ -43,17 +43,22 @@
 
     <div class="container d-flex align-items-center justify-content-between">
 
-        <div>
-            <h1>Detalhes</h1>
-            <h2>Quais são:</h2>
+        <div class="div-detalhes">
+            <div class="div-title-detalhes">
+              <img class="sp-01" src="{% static 'img/Spiral-1.svg' %}" alt="">
+              <h1>Detalhes</h1>
+              <img class="sp-02" src="{% static 'img/Spiral-2.svg' %}" alt="">
+            </div>
+
+            <h2>Quais são:</h2>           
 
             <div>
-                <h3>
-                    TURMA:<span class="bg-verde py-2 px-4 rounded-4 m-3">{{projeto.id_turma.nome_turma}}</span> 
-                    NUMERO:<span class="bg-verde py-2 px-4 rounded-4 m-3">{{projeto.id_turma.numero_turma}}</span> 
-                    ÍNICIO:<span class="bg-verde py-2 px-4 rounded-4 m-3">{{projeto.data_inicio}}</span>
-                    TERMINO:<span class="bg-verde py-2 px-4 rounded-4 m-3">{{projeto.data_inicio}}</span>
-                </h3>  
+                <div class="d-xl-flex ">
+                  <h3 class="fs-1">TURMA:<span class="bg-verde py-2 px-4 rounded-4 m-3">{{projeto.id_turma.nome_turma}}</span> </h3>
+                  <h3 class="fs-1">NUMERO:<span class="bg-verde py-2 px-4 rounded-4 m-3">{{projeto.id_turma.numero_turma}}</span></h3>
+                  <h3 class="fs-1">ÍNICIO:<span class="bg-verde py-2 px-4 rounded-4 m-3">{{projeto.data_inicio}}</span></h3>
+                  <h3 class="fs-1">TERMINO:<span class="bg-verde py-2 px-4 rounded-4 m-3">{{projeto.data_inicio}}</span></h3>  
+                </div>  
             </div>
 
             <!-- div dos cards -->
@@ -61,7 +66,7 @@
 
                 <h2>Material:</h2>
 
-                <div class="d-flex justify-content-between arquivos-div">
+                <div class="arquivos-div d-flex justify-content-between flex-xl-row flex-column gap-5">
 
                   <!-- card 01 -->
                   <a class="bg-verde rounded-5 card-material text-white" href="{{projeto.slide.url}}" target="_blank">
@@ -69,8 +74,8 @@
                     <img src="{% static 'img/slide-img.svg' %}" alt="">
 
                     <div class="div-link">
-                      <p>Slide</p>
-                      <p>Turma: {{projeto.id_turma.numero_turma}}</p>
+                      <p class="p1">Slide</p>
+                      <p class="p2">Turma: {{projeto.id_turma.numero_turma}}</p>
                     </div>
 
                   </a>
@@ -81,25 +86,26 @@
                     <img src="{% static 'img/video-img.svg' %}" alt="">
                     
                     <div class="div-link">
-                      <p>Video</p>
-                      <p>Turma: {{projeto.id_turma.numero_turma}}</p>
+                      <p class="p1">Video</p>
+                      <p class="p2">Turma: {{projeto.id_turma.numero_turma}}</p>
                     </div>
                     
                   </a>
 
                   <!-- card 03 -->
-                  <a class="bg-verde rounded-5 card-material text-white" href="{{projeto.texto}}" target="_blank">
+                  <a class="bg-verde rounded-5 card-material text-white" href="{{projeto.texto.url}}" target="_blank">
                     
                     <img src="{% static 'img/arquivo-img.svg' %}" alt="">
 
                     <div class="div-link">
-                      <p>Texto</p>
-                      <p>Turma: {{projeto.id_turma.numero_turma}}</p>
+                      <p class="p1">Texto</p>
+                      <p class="p2">Turma: {{projeto.id_turma.numero_turma}}</p>
                     </div>
 
                   </a>
-
+                  <img class="sp-03" src="{% static 'img/Spiral-3.svg' %}" alt="">
                 </div>
+
             </div>
         </div>
     </div>
