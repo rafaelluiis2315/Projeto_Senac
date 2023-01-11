@@ -27,22 +27,18 @@ header {
     z-index: 1;
     position: relative;
 }
+
+.is-active {
+    border-bottom: 3px solid var(--branco);
+}
   
 .is-active:hover { color: var(--cinza-claro); }
 .nav-item:not(.is-active):hover { color: var(--cinza-claro); }
   
-.nav-indicator {
-    position: absolute;
-    bottom: 0;
-    transition: .4s;
-    height: 2px;
-    z-index: 1;
-  }
-  
-  @media (max-width: 580px) {
-    .nav { overflow: auto; }
-  }
-  
+@media (max-width: 580px) {
+.nav { overflow: auto; }
+}
+
 
 /* footer */
 footer {

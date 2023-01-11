@@ -12,6 +12,11 @@
 <link rel="stylesheet" href="{% static 'css/home.css'%}">
 {% endblock stylesheet %}
 
+<!-- nav indicator -->
+{% block active-home %}
+is-active
+{% endblock active-home %}
+
 <!-- Conteudo Inicial -->
 {% block conteudo %}
 <main>
@@ -55,7 +60,7 @@
 
         </p>
 
-        <a class="mt-5 py-3 px-5 btn btn-verde" href="#">Get started</a>
+        <a class="mt-5 py-3 px-5 btn btn-verde" href="{% url 'Sobre' %}">Sobre nós</a>
 
       </div>
 
