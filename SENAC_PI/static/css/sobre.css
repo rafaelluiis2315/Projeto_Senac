@@ -1,4 +1,5 @@
 main {
+    font-family: 'Inder';
     padding-top: 150px;
 }
 
@@ -19,7 +20,7 @@ main {
 }
 
 .paragrafo-sobre {
-    font-family:"Inconsolata" ;
+    font-family:"Inder" ;
 }
 
 .card-sobre{

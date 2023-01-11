@@ -1,0 +1,50 @@
+<!-- carregando arquivos -->
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- title -->
+{% block title %}
+<title>Login | Integrifolio</title>
+{% endblock title %}
+
+<!-- CSS -->
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'css/login.css'%}">
+{% endblock stylesheet %}
+
+
+{% block conteudo %}
+    <div class="form__container">
+        <h1>Login</h1>
+        <div class="form__login">
+            <form>
+                    <div>
+                        <label for="">Username</label>
+                        <input id="nome" type="text" class="form__input" name="nome"> <br>
+                        <label for="">Password</label>
+                        <input id="password" type="password" class="form__input" name="password">
+                       
+                        <div class="forget-pass">
+                            <a href="https://google.com">Esqueci a senha</a>
+                        </div>
+
+                        <div class="fundo-verde clearfix">
+                            <img src="{% static 'img/fundo-verde.png' %}" alt="fundo-verde">
+                        </div>
+                       
+                        <div class="garota">
+                            <img src="{% static 'img/garota-programa.svg' %}" alt="garota programando">
+                        </div>
+
+                        <div class="button">
+                            <button class="button-back">Voltar</button>
+                        </div>
+
+                        <div class="button">
+                            <button class="button-login">Login</button>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </div>
+{% endblock conteudo %}

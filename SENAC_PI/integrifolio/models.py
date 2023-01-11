@@ -34,6 +34,8 @@ class TURMA(models.Model):
 class EIXO(models.Model):
     id = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=50, unique=True, null=False)
+    color = models.CharField(max_length=20)
+    icons = models.CharField(max_length=50)
 
     def __str__(self) -> str:
         return self.nome
