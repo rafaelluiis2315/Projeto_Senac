@@ -91,7 +91,7 @@ label {
 
 .fundo-verde{
     position: absolute;
-    left: 880px;
+    right: 0;
     top: 0px;
     z-index: -1;
 }
@@ -99,7 +99,7 @@ label {
 .garota{
     position: absolute;
     top: 150px;
-    left: 750px;
+    right: 200px;
 }
 
 
