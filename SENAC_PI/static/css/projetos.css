@@ -17,6 +17,10 @@ main{
     width: 100%;
 }
 
+.card-sobre {
+    margin-right: 20px;
+}
+
 .filtro-eixos {
     height: 40px;
     width: 100%;
@@ -37,6 +41,31 @@ main{
 .filtro-eixos div:hover {
     background-color: var(--verde-principal);
     transition-duration: 0.2s;
+}
+
+.div-hashtags {
+    margin-top: 50px;
+    width: 100%;
+    padding: 4px;
+    border: 2px solid var(--cinza-claro);
+    border-radius: 8px;
+}
+
+.div-hashtags button {
+    font-size: 1.3rem;
+    background-color: var(--verde-claro);
+    padding: 0 4px;
+    padding-right: 8px;
+    border-radius: 8px;
+}
+
+.div-hashtags button:hover {
+    background-color: var(--verde-principal);
+    transition-duration: 0.2s;
+}
+
+.div-hashtags button img {
+    width: 17px;
 }
 
 .div-cards-projetos {
