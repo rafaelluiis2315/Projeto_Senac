@@ -39,6 +39,11 @@
         <title>Integrifolio</title>
     {% endblock title %}
 
+    <!-- scripts -->
+    {% block scripts %}
+
+    {% endblock scripts %}
+
 </head>
 
 <body>
@@ -52,11 +57,10 @@
                 </div>
                 <div class="d-flex justify-content-end">
                     <nav class="nav">
-                        <a href="{% url 'Home' %}" class="nav-item" active-color="white" aria-current="page">Home</a>
-                        <a href="{% url 'Projetos' %}" class="nav-item" active-color="white">Projetos</a>
-                        <a href="{% url 'Sobre' %}" class="nav-item" active-color="white">Sobre</a>
-                        <a href="#" class="nav-item" active-color="white">Empresa</a>
-                        <span class="nav-indicator"></span>
+                        <a href="{% url 'Home' %}" class="nav-item {% block active-home %}{% endblock active-home %}" active-color="white" aria-current="page">Home</a>
+                        <a href="{% url 'Projetos' %}" class="nav-item {% block active-projetos %}{% endblock active-projetos %}" active-color="white">Projetos</a>
+                        <a href="{% url 'Sobre' %}" class="nav-item {% block active-sobre %}{% endblock active-sobre %}" active-color="white">Sobre</a>
+                        <a href="{% url 'Login' %}" class="nav-item {% block active-login %}{% endblock active-login %}" active-color="white">Empresa</a>
                     </nav> 
                 </div>
             </div>
@@ -155,9 +159,6 @@
 
     <!-- iconify -->
     <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
-
-    <!-- scripts -->
-    <script src="{% static 'scripts/base.js' %}"></script>
 
 </body>
 <script>
