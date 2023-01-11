@@ -59,3 +59,6 @@ def sobre(request):
 
 def projetos(request):
     return render(request, 'projetos.html')
+
+def login(request):
+    return render(request, 'login.html')

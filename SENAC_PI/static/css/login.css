@@ -1,0 +1,105 @@
+body {
+    margin:0;
+    padding:0;
+}
+
+h1 {
+    font-family: 'Inconsolata';
+    color: black;
+    font-size: 3.4rem;
+    font-weight: bold;
+    margin-top: 160px;
+    margin-left: 80px;
+}
+
+.form__login{
+    margin-top: 30px;
+}
+
+label {
+    color: black;
+    font-weight: bold;
+    font-family: 'Inder';
+    font-size: 2.2rem;
+    width: 257.05px;
+    height: 40.24px;
+    margin-left: 110px;
+}
+
+.form__input {
+    width: 280px;
+    background: #F5F5F5;
+    border-style: none;
+    width: 500px;
+    height: 52px;
+    border-radius: 10px;
+    font-size: 23px;
+    display: block;
+    margin-left: 110px;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.forget-pass{
+    font-family: 'Inter';
+    color: #3d7df5;
+    font-size: 1.8rem;
+    margin: 13px 0 40px 470px;
+    
+}
+
+.button{
+    font-family: 'Inter';
+    display: inline-block; 
+}
+
+.button-login {
+    width: 230px;
+    height: 45px;
+	padding: 12px 0px;
+    margin-left: 35px;
+	border: none;
+	border-radius: 8px;
+	outline: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: white;
+	background: #00D084;
+	cursor: pointer;
+	box-shadow: 0 3px 4px 0 rgb(145, 144, 144);
+
+}
+
+.button-back {
+    width: 230px;
+    height: 45px;
+	padding: 12px 0px;
+	border: none;
+	border-radius: 8px;
+	outline: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: white;
+	background: #455A64;
+	cursor: pointer;
+	box-shadow: 0 3px 4px 0 rgb(145, 144, 144);
+    margin-left: 110px;
+
+}
+
+.fundo-verde{
+    position: absolute;
+    left: 880px;
+    top: 0px;
+    z-index: -1;
+}
+
+.garota{
+    position: absolute;
+    top: 150px;
+    left: 750px;
+}
+
+
