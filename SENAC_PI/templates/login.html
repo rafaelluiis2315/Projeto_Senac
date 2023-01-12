@@ -18,34 +18,38 @@ is-active
 {% endblock active-login %}
 
 {% block conteudo %}
-    <div class="form__container">
+    <div class="form__container pb-5">
         <h1>Login</h1>
         <div class="form__login">
             <form>
                     <div>
-                        <label for="">Username</label>
-                        <input id="nome" type="text" class="form__input" name="nome"> <br>
-                        <label for="">Password</label>
-                        <input id="password" type="password" class="form__input" name="password">
-                       
-                        <div class="forget-pass">
-                            <a href="https://google.com">Esqueci a senha</a>
+                        <div class="div-campos-login">
+                            <label for="">Username</label>
+                            <input id="nome" type="text" class="form__input" name="nome"> <br>
+                            <label for="">Password</label>
+                            <input id="password" type="password" class="form__input" name="password">
+                        
+                            <div class="forget-pass">
+                                <a href="https://google.com">Esqueci a senha</a>
+                            </div>
                         </div>
 
                         <div class="fundo-verde">
                             <img src="{% static 'img/fundo-verde.png' %}" alt="fundo-verde">
                         </div>
                        
-                        <div class="garota d-none d-xxl-block">
+                        <div class="garota d-none d-xl-block">
                             <img src="{% static 'img/garota-programa.svg' %}" alt="garota programando">
                         </div>
 
-                        <div class="button d-block d-m">
-                            <button class="button-back">Voltar</button>
-                        </div>
+                        <div class="div-buttons d-flex">
+                            <div class="button d-block d-m">
+                                <button class="button-back">Voltar</button>
+                            </div>
 
-                        <div class="button">
-                            <button class="button-login">Login</button>
+                            <div class="button">
+                                <button class="button-login">Login</button>
+                            </div>
                         </div>
                     </div>
             </form>
