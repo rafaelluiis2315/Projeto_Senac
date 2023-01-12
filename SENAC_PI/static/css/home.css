@@ -64,6 +64,10 @@ main {
     left: -15px;
 }
 
+.card-curso{
+    max-width: 9em;
+}
+
 .card {
     text-decoration: none;
     border-radius: 17.5px;
@@ -88,6 +92,7 @@ main {
     position: relative;
     width: 160px;
     height: 130px;
+    margin: 0 5em;
 }
 .div-destaque-img div {
     position: absolute;
