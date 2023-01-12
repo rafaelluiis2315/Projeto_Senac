@@ -64,6 +64,11 @@ footer {
     text-decoration: none;
     color: var(--branco);
     margin: -10px 0;
+    cursor: pointer;
+}
+
+.fale-conosco:hover {
+    color: var(--cinza-claro);
 }
 
 .endereco-telefone {

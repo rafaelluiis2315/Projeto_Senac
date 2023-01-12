@@ -5,8 +5,8 @@ main {
 
 .div-segunda-imagem {
     position: relative;
-    width: 456px;
-    height: 411px;  
+    width: 25em;
+    height: 23em;  
 }
 
 .div-segunda-imagem div {
@@ -17,6 +17,44 @@ main {
     border-radius: 10px;
     top: -15px;
     left: -15px;
+}
+
+.div-segunda-imagem img {
+    width: 25em;
+    height: 23em;
+}
+
+@media (max-width: 450px){
+    section{
+        margin-bottom: 40%;
+    }
+
+    .card-map{
+        margin-top: 5%;
+    }
+
+    .div-segunda-imagem {
+        position: relative;
+        width: 20em;
+        height: 20em;
+        margin: 10% 8%;
+    }
+    
+    .div-segunda-imagem div {
+        position: absolute;
+        border: var(--preto) 1px solid;
+        width: inherit;
+        height: inherit;
+        border-radius: 10px;
+        top: -15px;
+        left: -15px;
+    }
+    
+    .div-segunda-imagem img {
+        width: 20em;
+        height: 20em;
+
+    }
 }
 
 .paragrafo-sobre {
@@ -30,7 +68,15 @@ main {
 
 .container-img{
     width: auto;
-    height: 16.24rem;
+    height: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-img div img{
+    width: 3em;
+    height: 3em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,6 +93,7 @@ main {
 .div-logo-destaque-sobre{
     width: 209px;
     height: 121px;
+    margin: 0 25%;
 }
 
 .logo-destaque-sobre{

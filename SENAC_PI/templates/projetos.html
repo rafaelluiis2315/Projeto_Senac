@@ -34,25 +34,25 @@ is-active
         </form>
     </div>
     
-    <div class="mt-5 d-flex align-items-center container">
+    <div class="mt-5 d-flex align-items-start container">
         <div class="card-sobre w-25">
             <form method="get">
-                <div class="mb-4 d-flex gap-4">
-                    <label for="">Modalidade do curso:</label>
-                    <select class="form-select w-25" name="tipy_curso">
-                        <option selected>Curso</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                <div class="mb-4 d-xl-flex align-items-xl-center">
+                    <label for="tipy_curso" class="w-75">Modalidade do curso:</label>
+                    <select class="form-select h-25 ms-xl-4" name="tipy_curso">
+                        <option selected value="">Curso</option>
+                        {% for curso in cursos %}
+                            <option value="{{ curso.id }}">{{ curso.nome }}</option>
+                        {% endfor %}
                     </select>
                 </div>  
-                <div class="mb-4 d-flex gap-4">
-                    <label for="">Eixo do curso:</label>
-                    <select class="form-select w-25" name="eixo">
-                        <option selected>Eixo</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                <div class="mb-4 d-xl-flex align-items-xl-center">
+                    <label for="eixo" class="w-75">Eixo do curso:</label>
+                    <select class="form-select h-25" name="eixo">
+                        <option selected value="">Eixo</option>
+                        {% for eixo in eixos %}
+                            <option value="{{ eixo.id }}">{{ eixo.nome }}</option>
+                        {% endfor %}
                     </select>
                 </div> 
                 <button class="btn btn-verde" type="submit">Filtrar</button>
@@ -105,7 +105,7 @@ is-active
             </div>
 
             <!-- filtro de eixos -->
-            <div class="filtro-eixos d-flex justify-content-between align-items-center">
+            <div class="filtro-eixos d-flex gap-1 align-items-center">
                 <div><span>Design</span></div>
                 <div><span>Turismo</span></div>
                 <div><span>Gestão</span></div>
@@ -117,73 +117,25 @@ is-active
             </div>
 
             <!-- cards projetos -->
-            <div class="div-cards-projetos d-flex flex-wrap justify-content-between">
+            <div class="div-cards-projetos row justify-content-center justify-content-lg-between gap-4 gap-xxl-5">
+                {% for projeto in projetos %}
+                    <!-- card -->
+                    <a class="card-projetos col-md-4 mb-md-0" href="{% url 'Detalhes' id=projeto.id %}">
+                        <div class="cp-bg-img" style="background-image: url({{projeto.foto_capa.url}});"></div>
+                        
+                        <div class="d-flex justify-content-between align-items-center mt-2 mx-2">
+                            <div class="cp-text">
+                                <h2>{{ projeto.nome_projeto }}</h2>
+                                <span>Turma {{ projeto.id_turma.numero_turma }}</span>
+                            </div>
 
-                <!-- card -->
-                <div class="card-projetos">
-                    <div class="cp-bg-img"></div>
-                    
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="cp-text">
-                            <h2>Distant Galaxy</h2>
-                            <span>Turma 58</span>
+                            <div class="div-icon-eixo" style="background-color: {{ projeto.eixo.color }};">
+                                <iconify-icon icon="{{ projeto.eixo.icons }}" style="font-size: 1.8rem"></iconify-icon>
+                            </div>
                         </div>
+                    </a>
+                {% endfor %}
 
-                        <div class="div-icon-eixo" style="background-color: {{ projeto.eixo_color }};">
-                            <iconify-icon icon="{{ projeto.eixo_icon }}" style="font-size: 1.8rem"></iconify-icon>
-                          </div>
-                    </div>
-                </div>
-
-                <!-- card -->
-                <div class="card-projetos">
-                    <div class="cp-bg-img"></div>
-                    
-                    <div class="cp-text">
-                        <h2>Distant Galaxy</h2>
-                        <span>Turma 58</span>
-                    </div>
-                </div>
-
-                <!-- card -->
-                <div class="card-projetos">
-                    <div class="cp-bg-img"></div>
-                    
-                    <div class="cp-text">
-                        <h2>Distant Galaxy</h2>
-                        <span>Turma 58</span>
-                    </div>
-                </div>
-
-                <!-- card -->
-                <div class="card-projetos">
-                    <div class="cp-bg-img"></div>
-                    
-                    <div class="cp-text">
-                        <h2>Distant Galaxy</h2>
-                        <span>Turma 58</span>
-                    </div>
-                </div>
-
-                <!-- card -->
-                <div class="card-projetos">
-                    <div class="cp-bg-img"></div>
-                    
-                    <div class="cp-text">
-                        <h2>Distant Galaxy</h2>
-                        <span>Turma 58</span>
-                    </div>
-                </div>
-
-                <!-- card -->
-                <div class="card-projetos">
-                    <div class="cp-bg-img"></div>
-                    
-                    <div class="cp-text">
-                        <h2>Distant Galaxy</h2>
-                        <span>Turma 58</span>
-                    </div>
-                </div>
 
             </div>
 
