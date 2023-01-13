@@ -26,7 +26,7 @@ is-active
 
       <div class="texto-section-principal">
 
-        <h1>Qualquer Coisa</h1>
+        <h1>Como montar um <br>projeto?</h1>
         <p>Fazer o melhor<br>trabalho possivel<br>sempre foi parte do<br>nosso trabalho.</p>
 
       </div>
@@ -52,12 +52,7 @@ is-active
         </div>
 
         <p>
-          "Botânica (do grego botánē, que significa planta)<br>
-          é uma área da Biologia voltada para o estudo das<br>
-          plantas. Tradicionalmente, outros organismos são<br>
-          estudados em Botânica, tais como algas, fungos<br>
-          e cianobactérias."
-
+          Projeto integrador são criados por alunos que estão afiliados à Macaw School, são desenvolvidos para colocar as competências técnicas e teóricas em prática. Criando oportunidades para que suas ideias se torne realidade e tudo isso com a ajuda de profissionais especializados.
         </p>
 
         <a class="mt-5 py-3 px-5 btn btn-verde" href="{% url 'Sobre' %}">Sobre nós</a>
@@ -68,7 +63,7 @@ is-active
         <div>
 
         </div>
-        <img src="{% static 'img/segunda-img.jpg' %}" alt="Segunda imagem">
+        <img src="{% static 'img/segunda-img.png' %}" class="rounded-4" alt="Segunda imagem">
       </div>
 
     </div>
@@ -106,15 +101,15 @@ is-active
 {% block conteudoTwo %}
 <div class="projetos pt-5">
   <main class="container mt-5 pt-5">
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-between align-items-center">
       <div>
         <h1><strong>Todos os projetos</strong></h1>
         <h3><strong>Quais são:</strong></h3>
       </div>
       <form method="get">
         <div class="input-group">
-          <input type="text" name="busca" class="form-control"  placeholder="Buscar projeto">
-          <button type="submit" class="btn btn-primary d-flex align-items-center">
+          <input type="text" name="busca" class="form-control"  placeholder="Pequise">
+          <button type="submit" class="btn">
             <iconify-icon icon="ic:baseline-search" style="font-size: 1.8rem"></iconify-icon>
           </button>
         </div>
@@ -135,7 +130,7 @@ is-active
           {% for projeto in curso.list %}
             
             <a href="{% url 'Detalhes' id=projeto.id %}" class="card" style="width: 18rem;">
-              <img src="{{ projeto.foto_capa.url }}" class="card-img-top p-3" alt="foto do projeto {{ projeto.nome_projeto }}">
+              <img src="{{ projeto.foto_capa.url }}" class="card-img-top p-3 rounded-5" alt="foto do projeto {{ projeto.nome_projeto }}">
               <div class="card-body">
                 <h5 class="card-title text-black">{{ projeto.nome_projeto }}</h5>
                 <div class="d-flex justify-content-between">

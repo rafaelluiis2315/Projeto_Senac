@@ -13,9 +13,9 @@
 {% endblock stylesheet %}
 
 <!-- nav indicator -->
-{% block active-detalhes %}
+{% block active-projetos %}
 is-active
-{% endblock active-detalhes %}
+{% endblock active-projetos %}
 
 {% block conteudo %}
 <main>
@@ -58,12 +58,12 @@ is-active
             <h2>Quais são:</h2>           
 
             <div>
-                <div class="d-xl-flex ">
-                  <h3 class="fs-1">TURMA:<span class="bg-verde py-2 px-4 rounded-4 m-3">{{projeto.id_turma.nome_turma}}</span> </h3>
-                  <h3 class="fs-1">NUMERO:<span class="bg-verde py-2 px-4 rounded-4 m-3">{{projeto.id_turma.numero_turma}}</span></h3>
-                  <h3 class="fs-1">ÍNICIO:<span class="bg-verde py-2 px-4 rounded-4 m-3">{{projeto.data_inicio}}</span></h3>
-                  <h3 class="fs-1">TERMINO:<span class="bg-verde py-2 px-4 rounded-4 m-3">{{projeto.data_inicio}}</span></h3>  
-                </div>  
+              <div class="row justify-content-sm-between w-100">
+                <h3 class="fs-1 col-xl-3">TURMA:<span class="bg-verde py-2 px-4 rounded-4 m-3">{{projeto.id_turma.nome_turma}}</span> </h3>
+                <h3 class="fs-1 col-xl-2 ">NUMERO:<span class="bg-verde py-2 px-4 rounded-4 m-3">{{projeto.id_turma.numero_turma}}</span></h3>
+                <h3 class="fs-1 col-xl-6 ">ÍNICIO:<span class="bg-verde py-2 px-4 rounded-4 m-3">{{projeto.data_inicio}}</span></h3>
+                <h3 class="fs-1 col-xl-6 ">TERMINO:<span class="bg-verde py-2 px-4 rounded-4 m-3">{{projeto.data_entrega}}</span></h3>  
+              </div>  
             </div>
 
             <!-- div dos cards -->

@@ -144,3 +144,14 @@ main {
     background-color: var(--verde-principal);
     height: 60.5rem;
 }
+
+@media ( max-width: 1200px ) {
+    .div-title-detalhes .sp-02 {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        top: -1%;
+        left: 110%;
+    }
+    
+}
